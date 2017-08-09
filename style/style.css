@@ -1,0 +1,257 @@
+@import url('http://fonts.googleapis.com/css?family=Lato:300,400');
+
+/* === CSS RESET === */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* === End of CSS RESET === */
+
+body {
+background:url('../img/chess_board_texture2.gif') no-repeat left top;
+background-size: 100%;
+background: url('../img/chess_board_texture2.gif') no-repeat center center fixed;
+-webkit-background-size: cover; //for safari and chrome
+-moz-background-size: cover; // for firefox
+-o-background-size: cover; // for opera
+background-size: cover;
+	color:rgba(255,255,255,0.8);
+	font-size: 1em;
+	font-family: "Lato",Arial, sans-serif;
+	font-weight: 300;
+	}
+	
+	h1 {
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 1.5em;
+	}
+
+a, a:visited {
+	color:rgba(0,0,0,0.6);
+	text-decoration: none;
+	border-bottom: 2px dotted;
+	transition: color 0.2s;
+}
+
+a:hover {
+	color: #AAA;
+}
+
+a:active {
+	color: lightblue;
+}
+
+.big {
+	display: block;
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 1.3em;
+	margin-bottom: -40px;
+	
+}
+
+.wrapper div {
+	position: absolute;
+}
+
+.settings, nav {
+	position: fixed;
+	z-index: 9999999;
+	bottom: 0;
+	background: rgba(255,255,255, 0.5);
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-size: 2.5em;
+
+
+}
+
+.settings {
+	right: 0;
+	padding: 10px 20px;
+}
+
+.settings a {
+	border: none;
+}
+
+nav {
+	left: 0;
+	border-radius: 0 0px 0 0;
+
+
+}
+
+
+nav a {
+display:block;
+	width: 6.5vw;
+	height: 17vh;
+	line-height: 100px;
+	border: none;
+	text-align: center;
+	transition: 0.25s;
+
+}
+
+#king:hover {
+	background: rgba(251,197,197,0.5);
+}
+#queen:hover {
+	background: rgba(251,224,255,0.5);
+}
+#rook:hover {
+	background: rgba(255,212,178,0.5);
+}
+#bishop:hover {
+	background: rgba(253,255,205,0.5);
+}
+#knight:hover {
+	background: rgba(205,235,255,0.5);
+}
+
+#pawn:hover {
+	background: rgba(220,255,242,0.5);
+}
+
+.sp-canvas {
+	display: none;
+}
+
+.arrow {
+	position: relative;
+	display: inline-block;
+}
+
+.demo { 
+	width: 800px;
+	font-size: 1em;
+	text-align: center;
+	font-weight: bold;
+	margin-top:-150px;
+
+}
+
+.demo .arrow {
+	font-size: 1em;
+	animation: point-down 0.5s alternate infinite;
+}
+
+.description {
+	top: 540px;
+	left: 180px;
+	width: 440px;
+	}
+
+.syntax {
+	top: 1310px;
+	left: 330px;
+	width: 400px;
+}
+
+.scrollbar {
+	top: 1540px;
+	left: 1600px;
+	width: 400px;
+}
+
+.rotations {
+	left: 2085px;
+	top: 460px;
+	width: 460px;
+	transform: rotate(-90deg) translateY(2.5em);
+}
+
+.rotations .upside-down {
+	font-size: 42px;
+	text-align: right;
+	transform: rotate(180deg) translateY(3em);
+}
+
+.source {
+	left: 2200px;
+	top: -800px;
+	width: 400px;
+	transform: rotate(90deg) translateX(50px);
+}
+
+.follow {
+	width: 475px;
+	left: 1100px;
+	top: -1100px;
+	transform: rotate(90deg) translateX(50px);
+}
+
+.follow .big {
+}
+
+.highlight {
+	animation: highlight 0.2s alternate 6 ;
+}
+
+@keyframes point-down {
+	from {
+		top: 0;
+	}
+	to {
+		top: 5px;
+	}
+}
+
+@keyframes highlight {
+	to {
+		background: lightblue;
+	}
+}
+
+
+
+a #start{
+
+}
+
+/* Back Button */
+.go-back {
+	margin-top:40px;
+	margin-left: 150px;
+	text-decoration: none;
+	color: black;
+	padding: 0px;
+	z-index: 20;
+	  opacity:0.6;
+	  font-size: 4em;
+	
+}
+
+.go-back:hover {
+opacity:1;
+	text-decoration: none;
+
+}
+
